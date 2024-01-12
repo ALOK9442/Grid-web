@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import Sheet from "../components/Sheet/Sheet";
+import Sheet from "../containers/SheetsContainer"
 
 export type SheetsContainerProps = {};
 

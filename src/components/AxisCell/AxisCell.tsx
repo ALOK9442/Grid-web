@@ -1,10 +1,14 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, ReactNode } from "react";
 import classes from "./AxisCell.module.css";
 
-export type AxisCellProps = {};
+export type AxisCellProps = React.HTMLAttributes<HTMLTableHeaderCellElement> & {
+  children?: ReactNode;
+};
 
 const AxisCell: FunctionComponent<AxisCellProps> = (props) => {
-  return <th className={classes.AxisCell}>{props.children}</th>;
+  const { children, ...rest } = props;
+
+  return <th {...rest} className={classes.AxisCell}>{children}</th>;
 };
 
 export default AxisCell;
